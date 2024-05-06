@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Contact</h1>
+  <!-- er + tab -->
+  <%  %>
+  <!-- pe + tab -->
+  <%=  %>
+  <!-- build a form to filter members -->
+  <!-- method -> http verb -->
+  <!-- action -> path -->
+  <form action="/contact" method="get">
+    <!-- type -> data type -->
+    <!-- name -> it assigns a name FOR THE PARAMS -->
+    <input type="text" name="member" value="<%= params[:member] %>">
+    <input type="submit" class="btn btn-primary">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :members, @members %>
+  </form>
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= member %></li>
+    <% end %>
+  </ul>
+  <!--  -->
+  <%= link_to 'Home', root_path, class: 'btn btn-primary'  %>
+  <%= link_to root_path, class: 'btn btn-primary' do %>
+    <i class="fa-solid fa-house"></i>
+  <% end %>
+</div>

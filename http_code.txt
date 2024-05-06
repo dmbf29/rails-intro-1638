@@ -1,0 +1,17 @@
+HTTP CODES
+# All good
+200 - OK
+201 -> Created
+
+# Redirects
+301 - Permanent Redirect
+303 - See other -> moves to another place
+
+# User messed up
+401 - Not authorized     -> i know you and you cant do this
+403 - Not authenticated  -> i dont know who you are
+404 - Not found
+422 - Unprocessable Entity -> trying to create something, but you didnt give the right info
+
+# Dev messed up
+500 - Server Error
